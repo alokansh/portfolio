@@ -456,3 +456,17 @@ h3 {
     display: none;
   }
 }
+
+/* Skills section: Core skills + Education side-by-side, Certifications full-width below */
+.skills-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.cert-full { width: 100%; }
+.cert-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 760px) {
+  .skills-top { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+}
