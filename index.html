@@ -79,15 +79,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-v3.css">
+  <style>
+    .test-banner{background:#b05e3b;color:#fff;font-weight:600;text-align:center;
+      padding:6px 12px;font-size:14px;position:sticky;top:0;z-index:999}
+  </style>
 </head>
 <body>
+  <div class="test-banner">⚠️ TEST SITE - not the live portfolio (anshalok.dev)</div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <header class="nav" id="nav">
+  <header class="nav" id="nav" style="background: #f7f4ee; border: 1px solid rgba(21, 21, 21, 0.12); box-shadow: 0 4px 20px rgba(21, 21, 21, 0.06);">
     <a href="#top" class="nav-logo">AA</a>
     <div class="nav-links">
       <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
       <a href="#skills">Skills</a>
     </div>
     <a href="#contact" class="nav-cta">Let's talk</a>
@@ -155,19 +161,18 @@
 
     <section class="section work" id="work">
       <div class="section-heading reveal">
-        <h2 class="eyebroww">Work</h2>
-        <h2>Happy Fashion</h2>
+        <p class="eyebrow">Work</p>
+        <h2>Selected projects</h2>
       </div>
 
       <div class="work-card reveal">
         <div class="work-meta">
-          <span>Freelance</span>
+          <span class="work-tag">Freelance · Client</span>
           <span>Feb 2026 - Present</span>
         </div>
-        <h3>Shopify website, audience growth, and customer automation</h3>
+        <h3>Happy Fashion</h3>
         <p>
-          Built and deployed a production-ready Shopify e-commerce website, including storefront setup,
-          product catalog, payment integration, post-launch support, and ongoing updates.
+          Built and deployed a production-ready Shopify e-commerce website for a handbag atelier in Noida, including storefront setup, product catalog, payment integration, post-launch support, and ongoing updates.
         </p>
         <div class="impact-list">
           <span>Shopify development</span>
@@ -179,10 +184,10 @@
 
       <div class="work-card reveal">
         <div class="work-meta">
-          <span>Personal project</span>
+          <span class="work-tag">Personal project</span>
           <span>2026</span>
         </div>
-        <h3>Mindwise - free, private mental-health self-checks</h3>
+        <h3>Mindwise</h3>
         <p>
           Built a static web app offering validated screening questionnaires (GAD-7,
           PHQ-9, PSS-10) for anxiety, depression, and stress. No login, no backend -
@@ -195,28 +200,26 @@
           <span>Data-driven design</span>
           <span>Privacy by design</span>
         </div>
-        <a class="button ghost" href="https://alokansh.github.io/mindwise/" target="_blank" rel="noopener">View project →</a>
       </div>
 
       <div class="work-card reveal">
         <div class="work-meta">
-          <span>IIT Patna capstone</span>
-          <span>Sem 2 · 2025</span>
+          <span class="work-tag">IIT Patna capstone</span>
+          <span>Sem 2 - 2025</span>
         </div>
-        <h3>Orbit: Productivity Hub</h3>
+        <h3>Orbit</h3>
         <p>
-          A multi-widget dashboard built as a semester-2 capstone: fitness tracker,
+          A multi-widget productivity dashboard built as a semester-2 capstone: fitness tracker,
           calendar, budget tracker, habit tracker, to-do list, live weather (Patna),
           quick notes, and a daily quote. Built with vanilla JavaScript and the
           browser APIs - no framework.
         </p>
         <div class="impact-list">
           <span>Vanilla JS</span>
-          <span>DOM &amp; state</span>
+          <span>DOM & state</span>
           <span>Weather API</span>
           <span>Dashboard</span>
         </div>
-        <a class="button ghost" href="https://gitxansh.github.io/orbitos/" target="_blank" rel="noopener">View project →</a>
       </div>
     </section>
 

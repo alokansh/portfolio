@@ -37,6 +37,14 @@ window.addEventListener("pointermove", (event) => {
   glow.style.transform = `translate3d(${event.clientX - 130}px, ${event.clientY - 130}px, 0)`;
 });
 
+// Fallback: if reveal elements haven't shown after 500ms, force them visible
+setTimeout(() => {
+  revealElements.forEach((el) => {
+    if (!el.classList.contains("is-visible")) {
+      el.classList.add("is-visible");
+    }
+  });
+}, 500);
 // Burger menu
 const navBurger = document.getElementById("navBurger");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -53,7 +61,6 @@ if (navBurger && mobileMenu) {
   });
 }
 
-// Floating nav scroll effect
 const nav = document.getElementById("nav");
 window.addEventListener("scroll", () => {
   if (nav) {
