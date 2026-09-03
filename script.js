@@ -20,7 +20,6 @@ const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-
       navLinks.forEach((link) => {
         link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
       });
@@ -34,42 +33,41 @@ document.querySelectorAll("section[id]").forEach((section) => {
 });
 
 window.addEventListener("pointermove", (event) => {
-  window.addEventListener("pointermove", (event) => {
-    if (!glow) return;
-    glow.style.transform = `translate3d(${event.clientX - 130}px, ${event.clientY - 130}px, 0)`;
+  if (!glow) return;
+  glow.style.transform = `translate3d(${event.clientX - 130}px, ${event.clientY - 130}px, 0)`;
+});
+
+// Burger menu
+const navBurger = document.getElementById("navBurger");
+const mobileMenu = document.getElementById("mobileMenu");
+if (navBurger && mobileMenu) {
+  navBurger.addEventListener("click", () => {
+    navBurger.classList.toggle("active");
+    mobileMenu.classList.toggle("open");
   });
-
-  // Burger menu
-  const navBurger = document.getElementById("navBurger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  if (navBurger && mobileMenu) {
-    navBurger.addEventListener("click", () => {
-      navBurger.classList.toggle("active");
-      mobileMenu.classList.toggle("open");
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navBurger.classList.remove("active");
+      mobileMenu.classList.remove("open");
     });
-    mobileMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navBurger.classList.remove("active");
-        mobileMenu.classList.remove("open");
-      });
-    });
-  }
+  });
+}
 
-  // Floating nav scroll effect
-  const nav = document.getElementById("nav");
-  window.addEventListener("scroll", () => {
-    if (nav) {
-      if (window.scrollY > 80) {
-        nav.style.borderColor = "rgba(15, 118, 110, 0.4)";
-        nav.style.boxShadow = "0 4px 20px rgba(21, 21, 21, 0.06)";
-      } else {
-        nav.style.borderColor = "var(--line)";
-        nav.style.boxShadow = "none";
-      }
+// Floating nav scroll effect
+const nav = document.getElementById("nav");
+window.addEventListener("scroll", () => {
+  if (nav) {
+    if (window.scrollY > 80) {
+      nav.style.borderColor = "rgba(15, 118, 110, 0.4)";
+      nav.style.boxShadow = "0 4px 20px rgba(21, 21, 21, 0.06)";
+    } else {
+      nav.style.borderColor = "var(--line)";
+      nav.style.boxShadow = "none";
     }
-  }, { passive: true });
+  }
+}, { passive: true });
 
-  document.querySelectorAll(".button, .contact-links a").forEach((link) => {
+document.querySelectorAll(".button, .contact-links a").forEach((link) => {
   link.addEventListener("pointerdown", () => link.classList.add("is-pressed"));
   link.addEventListener("pointerup", () => link.classList.remove("is-pressed"));
   link.addEventListener("pointerleave", () => link.classList.remove("is-pressed"));
