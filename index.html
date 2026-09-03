@@ -79,33 +79,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-v3.css">
-  <style>
-    .test-banner{background:#b05e3b;color:#fff;font-weight:600;text-align:center;
-      padding:6px 12px;font-size:14px;position:sticky;top:0;z-index:999}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="test-banner">⚠️ TEST SITE - not the live portfolio (anshalok.dev)</div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <header class="nav" id="nav" style="background: #f7f4ee; border: 1px solid rgba(21, 21, 21, 0.12); box-shadow: 0 4px 20px rgba(21, 21, 21, 0.06);">
-    <a href="#top" class="nav-logo">AA</a>
-    <div class="nav-links">
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Ansh Alok home">AA</a>
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="#work">Work</a>
-      <a href="#writing">Writing</a>
       <a href="#skills">Skills</a>
-    </div>
-    <a href="#contact" class="nav-cta">Let's talk</a>
-    <button class="nav-burger" id="navBurger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#work">Work</a>
-    <a href="#writing">Writing</a>
-    <a href="#skills">Skills</a>
-  </div>
 
   <main id="top">
     <section class="hero section">
@@ -138,41 +124,21 @@
       </aside>
     </section>
 
-    <div class="marquee-track">
-      <div class="marquee-content">
-        <span>Web Development</span><span class="dot">•</span>
-        <span>Content Strategy</span><span class="dot">•</span>
-        <span>Applied Psychology</span><span class="dot">•</span>
-        <span>Data Analytics</span><span class="dot">•</span>
-        <span>Project Management</span><span class="dot">•</span>
-        <span>Market Research</span><span class="dot">•</span>
-        <span>Negotiation</span><span class="dot">•</span>
-      </div>
-      <div class="marquee-content" aria-hidden="true">
-        <span>Web Development</span><span class="dot">•</span>
-        <span>Content Strategy</span><span class="dot">•</span>
-        <span>Applied Psychology</span><span class="dot">•</span>
-        <span>Data Analytics</span><span class="dot">•</span>
-        <span>Project Management</span><span class="dot">•</span>
-        <span>Market Research</span><span class="dot">•</span>
-        <span>Negotiation</span><span class="dot">•</span>
-      </div>
-    </div>
-
     <section class="section work" id="work">
       <div class="section-heading reveal">
-        <p class="eyebrow">Work</p>
-        <h2>Selected projects</h2>
+        <h2 class="eyebroww">Work</h2>
+        <h2>Happy Fashion</h2>
       </div>
 
       <div class="work-card reveal">
         <div class="work-meta">
-          <span class="work-tag">Freelance · Client</span>
+          <span>Freelance</span>
           <span>Feb 2026 - Present</span>
         </div>
-        <h3>Happy Fashion</h3>
+        <h3>Shopify website, audience growth, and customer automation</h3>
         <p>
-          Built and deployed a production-ready Shopify e-commerce website for a handbag atelier in Noida, including storefront setup, product catalog, payment integration, post-launch support, and ongoing updates.
+          Built and deployed a production-ready Shopify e-commerce website, including storefront setup,
+          product catalog, payment integration, post-launch support, and ongoing updates.
         </p>
         <div class="impact-list">
           <span>Shopify development</span>
@@ -184,10 +150,10 @@
 
       <div class="work-card reveal">
         <div class="work-meta">
-          <span class="work-tag">Personal project</span>
+          <span>Personal project</span>
           <span>2026</span>
         </div>
-        <h3>Mindwise</h3>
+        <h3>Mindwise - free, private mental-health self-checks</h3>
         <p>
           Built a static web app offering validated screening questionnaires (GAD-7,
           PHQ-9, PSS-10) for anxiety, depression, and stress. No login, no backend -
@@ -200,61 +166,29 @@
           <span>Data-driven design</span>
           <span>Privacy by design</span>
         </div>
+        <a class="button ghost" href="https://alokansh.github.io/mindwise/" target="_blank" rel="noopener">View project →</a>
       </div>
 
       <div class="work-card reveal">
         <div class="work-meta">
-          <span class="work-tag">IIT Patna capstone</span>
-          <span>Sem 2 - 2025</span>
+          <span>IIT Patna capstone</span>
+          <span>Sem 2 · 2025</span>
         </div>
-        <h3>Orbit</h3>
+        <h3>Orbit: Productivity Hub</h3>
         <p>
-          A multi-widget productivity dashboard built as a semester-2 capstone: fitness tracker,
+          A multi-widget dashboard built as a semester-2 capstone: fitness tracker,
           calendar, budget tracker, habit tracker, to-do list, live weather (Patna),
           quick notes, and a daily quote. Built with vanilla JavaScript and the
           browser APIs - no framework.
         </p>
         <div class="impact-list">
           <span>Vanilla JS</span>
-          <span>DOM & state</span>
+          <span>DOM &amp; state</span>
           <span>Weather API</span>
           <span>Dashboard</span>
         </div>
+        <a class="button ghost" href="https://gitxansh.github.io/orbitos/" target="_blank" rel="noopener">View project →</a>
       </div>
-    </section>
-
-    <section class="section writing" id="writing">
-      <p class="eyebrow reveal">Writing</p>
-      <h2 class="section-title reveal">From Medium</h2>
-      <p class="section-intro reveal">
-        I write about perfectionism, psychology, shipping work, and the
-        intersection of human behavior and technology.
-      </p>
-
-      <div class="posts">
-        <a href="https://medium.com/@anshalok/perfectionism-haunts-me-8063d3c300c5" target="_blank" class="post-card reveal">
-          <div class="post-date">Sept 2, 2026</div>
-          <h3 class="post-title">Perfectionism haunts me.</h3>
-          <p class="post-excerpt">
-            One word — or I can say one idea — that has reduced my productivity
-            is none other than my obsession with perfectionism...
-          </p>
-          <span class="post-read">Read on Medium →</span>
-        </a>
-        <a href="https://medium.com/@anshalok/psychological-view-on-impulsive-purchases-07187a4f8b54" target="_blank" class="post-card reveal">
-          <div class="post-date">Jan 13, 2026</div>
-          <h3 class="post-title">Psychological View on Impulsive Purchases</h3>
-          <p class="post-excerpt">
-            Every time you go to the market, you end up buying impulsively,
-            you promise yourself you won't buy unnecessarily...
-          </p>
-          <span class="post-read">Read on Medium →</span>
-        </a>
-      </div>
-
-      <a href="https://medium.com/@anshalok" target="_blank" class="more-link reveal">
-        See all articles on Medium →
-      </a>
     </section>
 
     <section class="section" id="skills">
@@ -324,15 +258,14 @@
     </section>
 
     <section class="section contact reveal" id="contact">
-      <div class="contact-heading">
+      <div>
         <p class="eyebrow">Let's connect</p>
         <h2>Open for practical, clean, growth-focused web work.</h2>
-        <p>I'm available for freelance web development, content strategy, and digital marketing consulting. If you've got a project that needs someone who actually cares about the humans using it — let's talk.</p>
       </div>
 
       <div class="contact-links" aria-label="Contact and social links">
         <a href="mailto:anshalokbhagat@gmail.com">Email</a>
-        <a href="tel:+918****1717">Call</a>
+        <a href="tel:+918292401717">Call</a>
         <a href="https://instagram.com/yoursbhagat" aria-label="Instagram profile">Instagram</a>
         <a href="https://medium.com/@anshalok" aria-label="Medium profile">Medium</a>
         <a href="#" aria-label="Facebook profile">Facebook</a>
